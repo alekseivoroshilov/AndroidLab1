@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab_1</string>
+    <string name = "send"> Send </string>
+    <string name = "message"> Input message </string>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vguideline1"
+            app:layout_constraintGuide_percent="0.2"
+            android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vguideline2"
+            app:layout_constraintGuide_percent="0.4"
+            android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vguideline3"
+            app:layout_constraintGuide_percent="0.6"
+            android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/vguideline4"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/hguideline1"
+            app:layout_constraintGuide_percent="0.2"
+            android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/hguideline2"
+            app:layout_constraintGuide_percent="0.4"
+            android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/hguideline3"
+            app:layout_constraintGuide_percent="0.6"
+            android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/hguideline4"
+            app:layout_constraintGuide_percent="0.8"
+            android:orientation="horizontal"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/message"
+            app:layout_constraintStart_toEndOf="@id/vguideline1"
+            app:layout_constraintEnd_toEndOf="@id/vguideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/hguideline1" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/send"
+            app:layout_constraintStart_toEndOf="@id/vguideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/hguideline2" />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintStart_toEndOf="@id/vguideline2"
+            app:layout_constraintEnd_toEndOf="@id/vguideline4"
+            app:layout_constraintTop_toTopOf="@id/hguideline2"
+            app:layout_constraintBottom_toBottomOf="@id/hguideline3" />
+
+        <CalendarView
+            android:id="@+id/calendarView1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:selectedWeekBackgroundColor="#ff0000"
+            android:weekNumberColor="#0000ff"
+            android:weekSeparatorLineColor="#00ff00"
+            app:layout_constraintStart_toEndOf="@id/vguideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hguideline3"
+            app:layout_constraintBottom_toBottomOf="@id/hguideline4" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/post"
+            app:layout_constraintStart_toEndOf="@id/vguideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hguideline4"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <CheckBox
+            android:id="@+id/ratingBar1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toEndOf="@id/vguideline1"
+            app:layout_constraintEnd_toEndOf="@id/vguideline2"
+            app:layout_constraintTop_toTopOf="@id/hguideline2"
+            app:layout_constraintBottom_toBottomOf="@id/hguideline4" />
+
+        <TextClock
+            android:id="@+id/textClock1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:format12Hour="h:mm"
+            android:format24Hour="h:mm"
+            android:text="TextClock"
+            android:textSize="40sp"
+            app:layout_constraintStart_toEndOf="@id/vguideline1"
+            app:layout_constraintEnd_toEndOf="@id/vguideline3"
+            app:layout_constraintTop_toTopOf="@id/hguideline4"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
